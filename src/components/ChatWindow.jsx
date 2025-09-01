@@ -1,6 +1,6 @@
 import MessageBubble from "./MessageBubble"
 
-function ChatWindow( messages ) {
+function ChatWindow( {messages} ) {
 
     return (
         <div className="chat-window">
