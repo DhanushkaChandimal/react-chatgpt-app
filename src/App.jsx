@@ -3,6 +3,7 @@ import './App.css'
 import Sidebar from './components/Sidebar'
 import ChatWindow from './components/ChatWindow'
 import MessageInput from './components/MessageInput'
+import {responses} from './data/responses'
 
 function App() {
   const [messages, setMessages] = useState([])
@@ -10,6 +11,8 @@ function App() {
 
   const handleSend = (text) => {
     setMessages(prev => [...prev, { role: 'user', text}])
+    const index = Math.floor(Math.random() * responses.length)
+    setMessages(prev => [...prev, { role: 'assistant', text: responses[index]}])
   }
 
   return (
