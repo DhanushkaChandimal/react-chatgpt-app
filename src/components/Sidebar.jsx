@@ -4,7 +4,7 @@ function Sidebar({ chats }) {
         <h2>Chats</h2>
         <ul>
             {chats.map((chat, index)=> (
-                <li key={index}>{chat}</li>
+                <li className="nav-chat" key={index}>{chat}</li>
             ))}
         </ul>
     </aside>

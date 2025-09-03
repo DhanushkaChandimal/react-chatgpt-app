@@ -25,3 +25,12 @@
 .sidebar ul { list-style: none; padding: 0; }
 .sidebar li { margin-bottom: 0.75rem; cursor: pointer; }
 .sidebar h2 { margin-bottom: 1rem; }
+
+.nav-chat{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
