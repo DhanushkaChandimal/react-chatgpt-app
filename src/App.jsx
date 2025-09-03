@@ -7,12 +7,13 @@ import {responses} from './data/responses'
 
 function App() {
   const [messages, setMessages] = useState([])
-  const chats = ['Chat 1', 'Help with something', 'Cake receipe']
+  const [chats, setChats] = useState([])
 
   const handleSend = (text) => {
     setMessages(prev => [...prev, { role: 'user', text}])
     const index = Math.floor(Math.random() * responses.length)
     setMessages(prev => [...prev, { role: 'assistant', text: responses[index]}])
+    chats.length == 0 ? setChats([text]) : null
   }
 
   return (
